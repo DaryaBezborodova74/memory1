@@ -41,3 +41,9 @@
   transform: rotateY(180deg);
   backface-visibility: hidden; 
 }
+
+.control-panel {
+  display: flex;
+  margin: 10pt auto;
+  justify-content: center;
+}

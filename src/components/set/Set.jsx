@@ -1,7 +1,8 @@
 import { useState } from "react";
-import {Card} from "./Card";
+import './Set.css';
+import {Card} from "../card/Card";
 export function Set(){
-    const cards = require('../data'); //подключить данные с data.json
+    const cards = require('../../data'); //подключить данные с data.json
     const [step, setStep] =useState(0);
 
     const handleNext = () => {
@@ -26,11 +27,13 @@ export function Set(){
             />
             <div className="control-panel">
                 <button 
+                    className="btn-control"
                     disabled = { step == 0 ? true : false}
                     onClick={handlePrev}> &lt;
                     </button>
                 <p>{step + 1} / {cards.length}</p>
                 <button 
+                    className="btn-control"
                     disabled = { step == cards.length - 1 ? true : false}
                     onClick={handleNext}> &gt;
                     </button>

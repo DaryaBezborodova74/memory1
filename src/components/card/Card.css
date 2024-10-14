@@ -1,0 +1,33 @@
+.card {
+    position: relative;
+    display:flex;
+    max-width: 200px;
+    min-height: 150px;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: baseline;
+    background-color: rgb(170, 231, 255);
+    border: solid 1px rgb(133, 129, 129);
+    border: solid 10px rgb(230, 230, 230);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-check {
+    transform: rotateY(180deg);
+  }
+  .card::after {
+    content:attr(data-back);
+    position: absolute;
+    inset:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lemonchiffon;
+    border: solid 1px gray;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden; 
+  }

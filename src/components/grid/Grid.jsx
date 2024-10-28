@@ -4,7 +4,7 @@ import {images} from "../../data"
 
 export function Grid(){
     return (
-        <div>
+        <div className="cards">
     {
         images.map((item)=>(
             <Card

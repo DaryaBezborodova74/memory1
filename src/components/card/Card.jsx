@@ -9,8 +9,8 @@ export function Card({path}) {
     }
     let className = `card ${checkCard ? 'card-check' : ''}`;
     return(
-        <div> 
-        <img src={path} alt="" />
+        <div className="cards"> 
+        <img className="card_img" src={path} alt="" />
         </div>
     );
 }

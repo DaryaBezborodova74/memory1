@@ -25,21 +25,21 @@ export const images = [{
   'id': '6',
   'url': img6,
 }, {
-  'id': '1',
+  'id': '7',
   'url': img1,
 }, {
-  'id': '2',
+  'id': '8',
   'url': img2,
 }, {
-  'id': '3',
+  'id': '9',
   'url': img3,
 }, {
-  'id': '4',
+  'id': '10',
   'url': img4,
 }, {
-  'id': '5',
+  'id': '11',
   'url': img5,
 }, {
-  'id': '6',
+  'id': '12',
   'url': img6,
 }];

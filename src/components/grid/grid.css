@@ -7,5 +7,8 @@
     display: grid;
     grid-template-columns: repeat(4, 300px);
     grid-template-rows: repeat(3, 200px);
-    gap: 20px;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }

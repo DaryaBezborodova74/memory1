@@ -1,21 +1,32 @@
-import { Header } from "../../components/header/Header";
-import { Card } from "../../components/card/Card";
-import { Outlet, NavLink } from "react-router-dom";
 import "./GamePage.css";
+import { images } from "../../data";
+import useGame from "../../components/useGame";
+import { Grid } from "../../components/grid/Grid";
+import Modal from "../../components/modalwindow/modalWindow";
 
-export function GamePage(){
+export function GamePage() {
+    const { finishedItems, handleReset, stepsCount, checkItems, isWin } = useGame(images);
+    console.log(1)
     return (
-        <div>
-            <Header/>
-            <h2>Создание сета карточек</h2>
-            <Card/>
-            <nav>
-                <NavLink to="createset" className={ ({isActive}) => (isActive ? 'link link--active':'link')}>Создать сет</NavLink>
-                <NavLink to="createcard" className={ ({isActive}) => (isActive ? 'link link--active':'link')}>Создать карточку</NavLink>
-            </nav>
-
-            <Outlet />
-
-        </div>
-    )
+        <section className="game container">
+            <div className="click"> {stepsCount} </div>
+            <Grid 
+                images={images}
+                finishedItems={finishedItems}
+                checkItems={checkItems}
+                />
+                {isWin && (
+                    <Modal>
+                        <h3 className="modal-caption">Победа!</h3>
+                        <p className="modal-description">Вы собрали все пары за {stepsCount} шагов</p>
+                        <button
+                            className="button modal-button"
+                            type="button"
+                            onClick={handleReset}>
+                                Новая игра
+                            </button>
+                    </Modal>
+                )}
+        </section>
+    );
 }

@@ -1,0 +1,24 @@
+.name {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.body {
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.p {
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.link {
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
